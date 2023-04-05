@@ -1,6 +1,6 @@
 local Hwid = {
     ["F7C22509"] = "F7C22509-6CEF-4701-B6CF-8A0AC4BA45E2"
-    ["033D5083"] = "033D5083-9501-4CDF-8906-F303BEC6C4CE"
+    --["033D5083"] = "033D5083-9501-4CDF-8906-F303BEC6C4CE"
 }
 local ClientId = game:GetService("RbxAnalyticsService"):GetClientId()
 local Hwide = string.split((ClientId),"-")
