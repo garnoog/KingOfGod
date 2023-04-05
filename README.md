@@ -1,6 +1,7 @@
+_G.Key = "033D5083"
 local Hwid = {
-    ["F7C22509"] = "F7C22509-6CEF-4701-B6CF-8A0AC4BA45E2",
-    ["033D5083"] = "033D5083-9501-4CDF-8906-F303BEC6C4CE"
+    ["033D5083"] = "033D5083-9501-4CDF-8906-F303BEC6C4CE",
+    ["F7C22509"] = "F7C22509-6CEF-4701-B6CF-8A0AC4BA45E2"
 }
 local ClientId = game:GetService("RbxAnalyticsService"):GetClientId()
 local Hwide = string.split((ClientId),"-")
@@ -5684,10 +5685,10 @@ local Status = Status_Tab:CreateSection("Status Quest")
 local Check_Bile = IN:AddLabel("Your Bile : 0")
 local Check_Frag = IN:AddLabel("Your Fragment : 0")
 local YLV = IN:AddLabel("Your Level : 1")
-local Bartlio_ST = Status:AddLabel(" : Quest Bartlio")
-local Open_Don_Swan_ST = Status:AddLabel(" : Quest Open Don Swan")
-local Observation_Haki_ST = Status:AddLabel(" : Quest Observation Haki")
-local Observation_Haki_V2_ST = Status:AddLabel(" : Quest Observation Haki V2")
+local Bartlio_ST = Status:AddLabel("❌ : Quest Bartlio")
+local Open_Don_Swan_ST = Status:AddLabel("❌ : Quest Open Don Swan")
+local Observation_Haki_ST = Status:AddLabel("❌ : Quest Observation Haki")
+local Observation_Haki_V2_ST = Status:AddLabel("❌ : Quest Observation Haki V2")
 Status:AddLabel({Name = "Status Player"})
 local YS = Status:AddLabel("SetSpawnPoint : ")
 local DF = Status:AddLabel("Devil Fruit : ")
@@ -5702,30 +5703,30 @@ function CheckStatus()
 	DF:Set("Devil Fruit : "..tostring(game:GetService("Players").LocalPlayer.Data.DevilFruit.Value))
 	YLV:Set("Your Level : "..tostring(game:GetService("Players").LocalPlayer.Data.Level.Value))
 	if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TalkTrevor","1") == 0 then
-		Open_Don_Swan_ST:Set(" : Open Don Swan Quest")
+		Open_Don_Swan_ST:Set("✅ : Open Don Swan Quest")
 	end
 	if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BartiloQuestProgress","Bartilo") == 3 then
-		Bartlio_ST:Set(" : Bartilo Quest") 
+		Bartlio_ST:Set("✅ : Bartilo Quest") 
 	end
 	if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("ProQuestProgress","SickMan") == 0 then
-		Observation_Haki_ST:Set(' : Quest Observation Haki')
+		Observation_Haki_ST:Set('✅ : Quest Observation Haki')
 	end
 	if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CitizenQuestProgress","Citizen") == 3 then
-		Observation_Haki_V2_ST:Set(' : Quest Observation Haki V2')
+		Observation_Haki_V2_ST:Set('✅ : Quest Observation Haki V2')
 	end
 	if game.ReplicatedStorage:FindFirstChild("Cake Prince [Lv. 2300] [Raid Boss]") then
-	    CAKESPAWN:Set("Cake Pirnce : ")
+	    CAKESPAWN:Set("Cake Pirnce : ✅")
 	    else
-	    CAKESPAWN:Set("Cake Pirnce : ")
+	    CAKESPAWN:Set("Cake Pirnce : ❌")
 	end
     if game:GetService("ReplicatedStorage"):FindFirstChild("Urban [Lv. 1750]") then
-        es:Set("Elite : ")
+        es:Set("Elite : ✅")
     elseif game:GetService("ReplicatedStorage"):FindFirstChild("Diablo [Lv. 1750]") then
-        es:Set("Elite : ")
+        es:Set("Elite : ✅")
     elseif game:GetService("ReplicatedStorage"):FindFirstChild("Deandre [Lv. 1750]") then
-        es:Set("Elite : ")
+        es:Set("Elite : ✅")
     else
-        es:Set("Elite : ")
+        es:Set("Elite : ❌")
        end
 	--[[for i,x in pairs(I_W) do
 		v = {
