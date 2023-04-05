@@ -1,13 +1,14 @@
-local Hwid = {
-    ["F7C22509"] = "F7C22509-6CEF-4701-B6CF-8A0AC4BA45E2"
-    --["033D5083"] = "033D5083-9501-4CDF-8906-F303BEC6C4CE"
+--[[local Hwid = {
+    --["GayKong"] = ""
+    ["Jinglen"] = "F7C22509-6CEF-4701-B6CF-8A0AC4BA45E2"
+    ["033D5083"] = "033D5083-9501-4CDF-8906-F303BEC6C4CE"
 }
 local ClientId = game:GetService("RbxAnalyticsService"):GetClientId()
 local Hwide = string.split((ClientId),"-")
 local Key = Hwide[1]
 
 if _G.Key == Key then
-    if Hwid[_G.Key] == game:GetService("RbxAnalyticsService"):GetClientId() then
+    if Hwid[_G.Key] == game:GetService("RbxAnalyticsService"):GetClientId() then]]--
 if not game:IsLoaded() then 
     repeat game.Loaded:Wait()
     until game:IsLoaded() 
@@ -12148,5 +12149,5 @@ end)
 if _G.Setting_table.Auto_Valkyrie_Helmet then
 	Auto_Valkyrie_Helmet = true
 end
-end
-end
+--end
+--end
